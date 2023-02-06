@@ -24,7 +24,9 @@ body {
   width: 150px;
   background-color: #191718;
 }
-
+#btn_navbar{
+  display: none;
+}
 .category__item {
   font-size: 16px;
   font-weight: 700;
@@ -32,6 +34,8 @@ body {
   padding-right: auto;
   cursor: pointer;
   color: #aaa;
+  border-bottom: 1px solid #5C5C5C;
+ 
 }
 
 .category__item:hover {
@@ -116,6 +120,7 @@ body {
   
 }
 
+
 .footer {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -128,6 +133,7 @@ body {
 @media (max-width: 1024px) {
   .logo__img {
     width: 240px;
+    transition: 0.3s;
   }
   .item-detail__img {width: 128px};
 
@@ -189,6 +195,28 @@ body {
 }
 
 @media (max-width: 640px) {
+  .content__logo{
+    position: relative;
+  }
+
+  .sidebar{
+ width: 0;
+ transform: translateX(-100%);
+ transition: 0.5s;
+ overflow: hidden;
+  }
+  .sidebar_show{
+    transform: translateX(0);
+    width: 150px;
+  
+  }
+  #btn_navbar{
+    display: block;
+    position: absolute;
+    left: 0;
+
+  }
+  
   .logo__img {
     width: 180px;
   }
